@@ -1,10 +1,18 @@
 #!/usr/bin/env python3
 
-class Prepend(object):
-    # Add the methods of the class here
+
+class Prepend:
+    def __init__(self, prefix: str) -> None:
+        self.start = prefix
+
+    def write(self, what: str) -> None:
+        print(f"{self.start}{what}")
+
 
 def main():
-    pass
+    p = Prepend("+++ ")
+    p.write("Hello")
+
 
 if __name__ == "__main__":
     main()
