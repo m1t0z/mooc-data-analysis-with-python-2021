@@ -2,11 +2,15 @@
 
 import pandas as pd
 
+
 def municipalities_of_finland():
-    return None
-    
+    df = pd.read_csv("src/municipal.tsv", sep="\t", index_col=0)
+    return df["Akaa":"Äänekoski"]
+
+
 def main():
-    return
-    
+    print(municipalities_of_finland())
+
+
 if __name__ == "__main__":
     main()
